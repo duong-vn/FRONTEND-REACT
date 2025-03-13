@@ -1,26 +1,15 @@
 
 import "./App.scss";
 
-// const App = () => {
-//   return (
-//     <div
-//     //  class="app-container"
-//     >
-//       {/* Hlloe with & ok */}
-//       <MyComponent />
-//     </div>
-//   );
-// };
+
 const App = () => {
-
-
   return (
-
-    <div className="App">
-        Hello World
-    </div>  
+    <div> 
+        HELLO WORLD
+    </div>
   );
-}
+};
+
 // const App = () => {
 //   const count = useSelector(state => state.counter.count);
 //   const dispatch = useDispatch();
