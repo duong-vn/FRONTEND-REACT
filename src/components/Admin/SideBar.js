@@ -18,6 +18,7 @@ import {
 
 import sidebarBg from "../../assets/bg2.jpg";
 import "react-pro-sidebar/dist/css/styles.css";
+import { Link } from "react-router-dom";
 
 const SideBar = ({ image, collapsed, toggled, handleToggleSidebar }) => {
   return (
@@ -31,6 +32,7 @@ const SideBar = ({ image, collapsed, toggled, handleToggleSidebar }) => {
       >
         <SidebarHeader>
           <div
+            className="sidebar-header"
             style={{
               padding: "24px",
               textTransform: "uppercase",
@@ -42,7 +44,9 @@ const SideBar = ({ image, collapsed, toggled, handleToggleSidebar }) => {
               whiteSpace: "nowrap",
             }}
           >
-            TAO
+            <Link to="/" className="logotext">
+              TAO
+            </Link>
           </div>
         </SidebarHeader>
 
@@ -53,6 +57,7 @@ const SideBar = ({ image, collapsed, toggled, handleToggleSidebar }) => {
               suffix={<span className="badge red">NEW</span>}
             >
               da boad
+              <Link to="/admins" />
             </MenuItem>
             <MenuItem icon={<FaGem />}>comps</MenuItem>
           </Menu>
@@ -60,10 +65,14 @@ const SideBar = ({ image, collapsed, toggled, handleToggleSidebar }) => {
             <SubMenu
               suffix={<span className="badge yellow">3</span>}
               icon={<FaRegLaughWink />}
+              title={"USER"}
             >
-              <MenuItem> 1</MenuItem>
-              <MenuItem> 2</MenuItem>
-              <MenuItem> 3</MenuItem>
+              <MenuItem>
+                Quản lí user
+                <Link to="/admins/manage-user" />
+              </MenuItem>
+              <MenuItem>Gì đó idkidk</MenuItem>
+              <MenuItem>Gì đó idk 2 </MenuItem>
             </SubMenu>
           </Menu>
         </SidebarContent>
@@ -76,7 +85,7 @@ const SideBar = ({ image, collapsed, toggled, handleToggleSidebar }) => {
             }}
           >
             <a
-              href="https://github.com/azouaoui-med/react-pro-sidebar"
+              href="https://www.facebook.com/profile.php?id=100022053741307"
               target="_blank"
               className="sidebar-btn"
               rel="noopener noreferrer"
@@ -89,7 +98,7 @@ const SideBar = ({ image, collapsed, toggled, handleToggleSidebar }) => {
                   overflow: "hidden",
                 }}
               >
-                viewSource
+                TAO
               </span>
             </a>
           </div>

@@ -1,0 +1,80 @@
+.manage-user-container{
+    padding: 10px;
+    .title{
+        font-size: 50px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-align: center;
+        font-weight: 700;
+
+    }
+    .manage-user-content{
+        
+        .btn-add-new{
+            display: flex;
+            justify-content: space-between;
+          margin: 15px 15px;
+        }
+        .role-sort{
+            margin: 15px 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            border-radius: 7%;
+        }
+    }
+    .table-user-container{
+            display: block;
+        .action-btn{
+            text-align: center;
+            width:30%;
+                .btn-info{
+               margin-right: 30px;
+                }
+                .btn-danger{
+                    margin-right: 30px;
+                }
+                .btn-warning{
+                    margin-right: 30px;
+                }
+        
+    }
+    
+}
+    
+}
+.modal-add-user{
+    .img-preview{
+            img{
+               max-width: 400px;
+                max-height: 400px;
+                border-radius: 0%;
+                margin-right: 20px;
+            }
+           border: 1px solid #111111;
+              padding: 10px;
+            border-style: dashed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ccc;
+        }
+    .label-upload{
+        // border: 1px solid red; 
+        background: rgb(207, 222, 235);
+        gap: 4px !important;
+        padding: 6px 12px;
+        display: flex;
+    
+        align-items: center;
+        width: fit-content;
+        border-radius: 5px;
+        /* justify-content: center; */
+       &:hover{
+           background: rgb(177, 202, 226);
+       }
+    }
+    
+
+    }

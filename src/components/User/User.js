@@ -1,5 +1,5 @@
 const User = (props) => {
-  return <div>địt mẹ mày chỗ này là user</div>;
+  return <div>user content</div>;
 };
 
 export default User;

@@ -1,0 +1,2 @@
+project này chỉ bao gồm giao diện front end của website, để chạy đầy đủ cần cả phần backend ( ở phần quản lí user ta cần backend để 
+lấy data từ database) nhưng phần backend được sử dụng trong project này chưa được up lênlên
