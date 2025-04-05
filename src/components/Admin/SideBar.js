@@ -37,7 +37,7 @@ const SideBar = ({ image, collapsed, toggled, handleToggleSidebar }) => {
               padding: "24px",
               textTransform: "uppercase",
               fontWeight: "bold",
-              fontSize: 14,
+              fontSize: 36,
               letterSpacing: "1px",
               overflow: "hidden",
               textOverflow: "ellipsis",
@@ -45,7 +45,7 @@ const SideBar = ({ image, collapsed, toggled, handleToggleSidebar }) => {
             }}
           >
             <Link to="/" className="logotext">
-              TAO
+              HOME
             </Link>
           </div>
         </SidebarHeader>

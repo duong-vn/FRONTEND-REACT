@@ -46,6 +46,17 @@ body {
               }
           }
     .navbar {
+      .logotext{
+        text-decoration: none;
+        color: #5e0242;
+        font-weight: 700;
+        font-size: 30px;
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 0px;      
+      }
       z-index: 10;
       background-color: rgba(0,0,0,0) !important;
       .nav-link{

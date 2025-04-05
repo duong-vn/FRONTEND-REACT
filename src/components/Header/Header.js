@@ -3,11 +3,16 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand>DuongTuan</Navbar.Brand>
+        <Navbar.Brand>
+          <Link to="/" className="logotext">
+            DuongTuan
+          </Link>
+        </Navbar.Brand>
         {/* <NavLink className="nav-bar nav-link" to="/">
           DuongTuan
         </NavLink> */}
