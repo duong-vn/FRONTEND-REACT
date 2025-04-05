@@ -21,6 +21,7 @@ const ManageUser = (props) => {
   const [dataView, setDataView] = useState({});
   const [dataDelete, setDataDelete] = useState({});
   const [totalUser, setTotalUser] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
   const handleClickUpdate = (user) => {
     setDataUpdate(user);
     setShowModalUpdate(true);
@@ -118,31 +119,41 @@ const ManageUser = (props) => {
             fetchDataPaginate={fetchDataPaginate}
             pageCount={pageCount}
             totalUser={totalUser}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
           />
         </div>
         <ModalCreateuser
           show={showModal}
           setShow={setShowModal}
           fetchData={fetchData}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
         />
         <ModalUpdateUser
           show={showModalUpdate}
           setShow={setShowModalUpdate}
           dataUpdate={dataUpdate}
-          fetchData={fetchData}
+          fetchDataPaginate={fetchDataPaginate}
           resetUpdateData={resetUpdateData}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
         />
         <ModalViewUser
           show={showData}
           setShow={setShowData}
           dataView={dataView}
           resetDataView={resetDataView}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
         />
         <ModalDeleteUser
           show={showModalDelete}
           setShow={setShowModalDelete}
           user={dataDelete}
           fetchData={fetchData}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
         />
       </div>
     </div>

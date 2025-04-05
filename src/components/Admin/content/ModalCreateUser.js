@@ -39,7 +39,6 @@ const ModalCreateUser = (props) => {
     setRole("USER");
     setImage("");
     setImagePreview("");
-    fetchData();
   };
 
   const handleSubmit = async () => {
@@ -64,6 +63,8 @@ const ModalCreateUser = (props) => {
     console.log(data);
     if (data && data.EC === 0) {
       handleClose();
+      props.setCurrentPage(1);
+      fetchData();
       console.log(">>>>>", data);
       toast.success("Create user success");
     }

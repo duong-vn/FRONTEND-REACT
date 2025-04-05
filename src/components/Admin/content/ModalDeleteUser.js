@@ -13,6 +13,7 @@ const ModalDeleteUser = (props) => {
       toast.success("Delete user success!");
       handleClose();
       props.fetchData();
+      props.setCurrentPage(1);
     } else {
       toast.error(data.EM);
       handleClose();

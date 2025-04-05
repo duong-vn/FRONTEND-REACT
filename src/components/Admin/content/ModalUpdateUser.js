@@ -10,6 +10,7 @@ import { toast } from "react-toastify";
 import { postUpdateUser } from "../../../services/apiService";
 import _, { update } from "lodash";
 import axios from "axios";
+import { GiConsoleController } from "react-icons/gi";
 
 const ModalUpdateUser = (props) => {
   const [email, setEmail] = useState("");
@@ -58,7 +59,8 @@ const ModalUpdateUser = (props) => {
       handleClose();
       console.log(">>>>>", data);
       toast.success("Update user success!");
-      props.fetchData();
+      props.fetchDataPaginate(props.currentPage);
+      console.log(">>>>>>", props.currentPage);
     }
     if (data && data.EC !== 0) {
       toast.error(data.EM);
