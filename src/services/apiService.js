@@ -33,6 +33,9 @@ const postDeleteUser = (id) => {
     data: { id: id },
   });
 };
+const postLogin = (email, password) => {
+  return axios.post("api/v1/login", { email, password });
+};
 
 export {
   postCreateNewUser,
@@ -40,4 +43,5 @@ export {
   postUpdateUser,
   postDeleteUser,
   getAllUserPaginate,
+  postLogin,
 };

@@ -1,0 +1,94 @@
+.login-container{
+    .login-header{
+        button, select {
+            text-transform: none;
+            border: 1px solid #000000;
+            background-color: #fffbfe;
+            margin-left: 10px;
+            padding: 3px 5px;
+            height: fit-content;
+            border-radius: 5px;
+            &:hover{
+                background-color: #5e0242;
+                color: white;
+                cursor: pointer;
+            }
+
+        }
+        span{
+            padding-top: 3px;
+            &:hover{
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+       
+        padding: 10px 100px 0 100px;
+        display: flex;
+    
+        justify-content: flex-end;
+        height: 50px;
+        color: #5e0242;
+        margin: 10px 10px;
+        font-size: 20px;
+        text-align: right;
+    }
+    .title{
+        font-size: 30px;
+        color: #5e0242;
+        text-align: center;
+        padding-top: 15px;
+    }
+    .welcome{
+        font-size: 14px;
+        color: #5e0242;
+        padding: 10px 0px;
+        text-align: center;
+    
+    }
+    .content-form{
+       
+        input{
+            margin-bottom: 15px
+        }
+        .forgot-password{
+            
+            font-size: 14px;
+            color: #5e0242;
+            padding: 5px 0px;
+            &:hover{
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+        button{
+            width: 100%;
+            margin: 10px 0px;
+            background-color: #5e0242;
+            color: white;
+            border: none;
+            padding: 0px 20px;
+            font-size: 16px;
+            height: 40px;
+            cursor: pointer;
+            &:hover{
+                background-color: #690148;
+            }
+            &.active{
+                background-color: #bea1b6;
+            }
+        
+        
+        }
+        .back {
+            padding: 5px 10px;
+            border-radius: 10px;
+           width: fit-content;     
+           margin-top: 10px;     
+            &:hover{
+                background-color: #5e0242;
+                color: white;
+                cursor: pointer             }
+        }
+    }
+}
