@@ -33,8 +33,20 @@ const postDeleteUser = (id) => {
     data: { id: id },
   });
 };
-const postLogin = (email, password) => {
-  return axios.post("api/v1/login", { email, password });
+const postLogin = (userEmail, userPassword) => {
+  return axios.post("api/v1/login", {
+    email: userEmail,
+    password: userPassword,
+  });
+};
+const postRegister = (email, password, username) => {
+  const data = new FormData();
+
+  data.append("username", username);
+  data.append("email", email);
+  data.append("password", password);
+
+  return axios.post("api/v1/register", data);
 };
 
 export {
@@ -44,4 +56,5 @@ export {
   postDeleteUser,
   getAllUserPaginate,
   postLogin,
+  postRegister,
 };

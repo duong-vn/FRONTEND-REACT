@@ -1,38 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
+
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import User from "./components/User/User";
-import Admin from "./components/Admin/Admin";
-import Home from "./components/Home/Home";
-import ManageUser from "./components/Admin/content/ManageUser";
-import DashBoard from "./components/Admin/content/DashBoard";
-import Login from "./components/Ath/Login";
-import SignUp from "./components/Ath/SignUp";
+import Layout from "./Layout";
+import { BrowserRouter } from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <Provider store={store}>
     {/* <React.StrictMode> */}
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route index element={<Home />} />
-          <Route path="/users" element={<User />} />
-        </Route>
-
-        <Route path="/admins" element={<Admin />}>
-          <Route index element={<DashBoard />} />
-          <Route path="manage-user" element={<ManageUser />}></Route>
-        </Route>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="*" element={<h2>Not Found 404</h2>} />
-        <Route path="/sign-up" element={<SignUp />} />
-      </Routes>
+      <Layout />
     </BrowserRouter>
     {/* </React.StrictMode> */}
   </Provider>

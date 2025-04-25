@@ -19,8 +19,13 @@ import {
 import sidebarBg from "../../assets/bg2.jpg";
 import "react-pro-sidebar/dist/css/styles.css";
 import { Link } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 const SideBar = ({ image, collapsed, toggled, handleToggleSidebar }) => {
+  const navigate = useNavigate();
+  const handleOnClickLogin = () => {
+    navigate("/");
+  };
+
   return (
     <>
       <ProSidebar
@@ -32,7 +37,7 @@ const SideBar = ({ image, collapsed, toggled, handleToggleSidebar }) => {
       >
         <SidebarHeader>
           <div
-            className="sidebar-header"
+            className="sidebar-header logotext"
             style={{
               padding: "24px",
               textTransform: "uppercase",
@@ -43,10 +48,9 @@ const SideBar = ({ image, collapsed, toggled, handleToggleSidebar }) => {
               textOverflow: "ellipsis",
               whiteSpace: "nowrap",
             }}
+            onClick={() => handleOnClickLogin()}
           >
-            <Link to="/" className="logotext">
-              HOME
-            </Link>
+            HOME
           </div>
         </SidebarHeader>
 
@@ -71,7 +75,10 @@ const SideBar = ({ image, collapsed, toggled, handleToggleSidebar }) => {
                 Quản lí user
                 <Link to="/admins/manage-user" />
               </MenuItem>
-              <MenuItem>Gì đó idkidk</MenuItem>
+              <MenuItem>
+                Gì đó idkidk
+                <Link to="/admins/manage-group" />
+              </MenuItem>
               <MenuItem>Gì đó idk 2 </MenuItem>
             </SubMenu>
           </Menu>

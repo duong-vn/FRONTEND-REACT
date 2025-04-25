@@ -4,10 +4,14 @@
 .pro-sidebar{
   .sidebar-header{
     text-align: center;
-   .logotext{
+   &.logotext{
     
     text-decoration: none;
     color: #fff;
+      &:hover{
+        color: #dfb1b1;
+        cursor: grabbing;
+      }
    }
 
 }
