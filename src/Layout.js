@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from "./App";
 import User from "./components/User/User";
+import ListQuiz from "./components/User/ListQuiz";
 import Admin from "./components/Admin/Admin";
 import Home from "./components/Home/Home";
 import ManageUser from "./components/Admin/content/ManageUser";
@@ -16,7 +17,7 @@ const Layout = () => {
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
-          <Route path="/users" element={<User />} />
+          <Route path="/users" element={<ListQuiz />} />
         </Route>
 
         <Route path="/admins" element={<Admin />}>
